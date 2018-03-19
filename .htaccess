@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	
+	RewriteCond %{HTTP_HOST} !^www.losreyes.com.ar(/)?$ [NC]
+	RewriteRule ^(.*) http://www.losreyes.com.ar/$1 [L,R=301]
+</IfModule>
+
+#php_value include_path ".:/var/www/vhosts/guerrasexy.com/httpdocs/"
+
+#php_value display_errors on
+#php_value display_startup_errors on
